@@ -18,16 +18,19 @@ import java.util.Collection;
 
 final class MyJSON implements JSON {
 
+  public MyJSON() {
+    dict = new Dictionary();
+  }
   @Override
   public JSON getObject(String name) {
-    // TODO: implement this
+
     return null;
   }
 
   @Override
   public JSON setObject(String name, JSON value) {
-    // TODO: implement this
-    return this;
+    dict.put(name, value);
+    return value;
   }
 
   @Override
